@@ -1,6 +1,6 @@
 {
   "name": "@badrequest400/faker-jellycat",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Library to create mock Jellycat data",
   "bugs": "https://github.com/badrequest400/faker-jellycat/issues",
   "repository": {
