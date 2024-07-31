@@ -1,6 +1,6 @@
 {
   "name": "@badrequest400/faker-jellycat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library to create mock Jellycat data",
   "bugs": "https://github.com/badrequest400/faker-jellycat/issues",
   "repository": {
@@ -11,18 +11,18 @@
     "node": ">=18.20"
   },
   "type": "module",
-  "main": "./dist/src/index.cjs",
-  "module": "./dist/src/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/src/index.js",
-      "require": "./dist/src/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
     "./*": {
-      "import": "./dist/src/*.js",
-      "require": "./dist/src/*.cjs",
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs",
       "types": "./dist/*.d.ts"
     }
   },
