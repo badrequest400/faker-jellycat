@@ -1,4 +1,7 @@
-# Faker Jellycat
+
+# faker-jellycat
+
+![Tests](https://github.com/badrequest400/faker-jellycat/actions/workflows/cd.yml/badge.svg)
 
 A tiny library to generate mock data of tiny companions.
 
