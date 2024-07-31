@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Library to create mock Jellycat data",
   "engines": {
-    "node": ">=20.6"
+    "node": ">=18.20"
   },
   "type": "module",
   "main": "./dist/index.cjs",
