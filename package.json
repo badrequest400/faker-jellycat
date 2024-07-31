@@ -1,0 +1,19 @@
+{
+  "name": "faker-jellycat",
+  "version": "1.0.0",
+  "description": "Library to create mock Jellycat data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jellycat",
+    "fake",
+    "faker",
+    "mock",
+    "test",
+    "testing"
+  ],
+  "author": "Balazs Cseh",
+  "license": "MIT"
+}
