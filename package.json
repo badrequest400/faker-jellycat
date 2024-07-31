@@ -1,5 +1,5 @@
 {
-  "name": "faker-jellycat",
+  "name": "@badrequest400/faker-jellycat",
   "version": "1.0.0",
   "description": "Library to create mock Jellycat data",
   "engines": {
