@@ -2,9 +2,38 @@
   "name": "faker-jellycat",
   "version": "1.0.0",
   "description": "Library to create mock Jellycat data",
-  "main": "index.js",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs",
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "files": [
+    "package.json",
+    "dist/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "yarn run build:clean && yarn run build:esm && yarn run build:cjs && yarn run build:types",
+    "build:clean": "rm -rf ./dist",
+    "build:esm": "esbuild --platform=node --format=esm --outdir=./dist ./src/*.ts",
+    "build:cjs": "esbuild --platform=node --format=cjs --outdir=./dist --out-extension:.js=.cjs ./src/*.ts",
+    "build:types": "tsc --emitDeclarationOnly",
+    "check": "tsc --noEmit",
+    "test": "vitest --config ./vitest.config.ts run",
+    "test:watch": "vitest --config ./vitest.config.ts watch"
   },
   "keywords": [
     "jellycat",
@@ -15,5 +44,10 @@
     "testing"
   ],
   "author": "Balazs Cseh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
+  }
 }
